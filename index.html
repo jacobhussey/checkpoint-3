@@ -16,28 +16,87 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">checkpoint-3</span>
-      </a>
+  <header class="container-fluid">
+    <nav class="navbar navbar-dark no-select bg-dark text-light row">
+      <h1 class="col-9 ms-3"><span class="S">N</span>ote<span class="">s</span>mith <i class="mdi mdi-animation S"></i>
+      </h1>
+
     </nav>
   </header>
-  <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+
+  <main class="bg-dark">
+    <section class="container-fluid">
+      <!-- <button class="btn btn-primary mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+        aria-controls="offcanvasExample">
+        see notes
+      </button> -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title no-select" id="offcanvasLabel">Total Notes: <span id="total-notes"></span>
+          </h5>
+
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="notes-list">
+
         </div>
       </div>
-    </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <h3 class="text-light text-center me-4 no-select">CREATE NEW NOTE</h3>
+          <div><button class="btn btn-primary ms-5 w-50 my-2" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvas" aria-controls="offcanvasExample">
+              <span class="S">n</span>otes list <i class="mdi mdi-animation S"></i>
+            </button>
+            <form action="" onsubmit="app.notesController.createNote()">
+          </div>
+          <div class="d-flex"><input required class="form-control w-100" type="text" id="name" name="name" required
+              minlength="3" maxlength="15" placeholder="note name"><button type="submit"
+              class="btn btn-primary text-center roundbutton"><i class="mdi mdi-plus-outline"></i> </button>
+          </div>
+          <div class="d-flex">
+            <input type="color" required name="colorPicker"
+              class="form-control form-control-color ms-3 mt-2 color-picker" id="colorPicker" value="#563d7c"
+              title="Choose your color">
+            <label for="exampleColorInput" class="form-label text-white ms-2 mt-3 no-select"><i><span class="red">Choose
+                </span><span class="blue">your </span><span class="green">note </span><span
+                  class="pink">color!</span></i></label>
+          </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 bg-dark">
+          <div class="row mt-5" id="new-note"></div>
+
+          <!-- <div class="row justify-content-center"> -->
+          <!-- <div class="col-6 ms-5">
+              <iframe width="550" height="450" src="https://www.youtube.com/embed/QUndnWBR0A0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div> -->
+        </div>
+        <!-- <div class="row">
+            <div class="col-4">
+              <h1></h1>
+              <h4></h4>
+              <h4></h4>
+            </div>
+            <div class="col-5"></div>
+            <i class="mdi mdi-delete"></i>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div> -->
+      </div>
+      </div>
+
+    </section>
   </main>
+
+
   <footer class="bg-dark text-light">
-    <div class="text-center no-select">
-      <p><small>Made with 💖 by CodeWorks</small></p>
-    </div>
+
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

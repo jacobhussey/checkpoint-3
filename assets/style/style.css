@@ -1,1 +1,44 @@
 /* BASIC STYLES HERE */
+.roundbutton {
+    border-radius: 50%;
+    border: solid 1px white;
+    transform: translateX(-2vw)
+}
+
+.red {
+    color: rgb(238, 242, 175);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.blue {
+    color: rgb(247, 255, 7);
+    font-weight: bold;
+    font-size: 12px;
+
+
+}
+
+.green {
+    color: rgb(247, 158, 5);
+    font-weight: bold;
+    font-size: 12px;
+
+}
+
+.pink {
+    color: rgb(241, 94, 49);
+    font-weight: bold;
+    font-size: 12px;
+
+}
+
+.color-picker {
+    border: solid 2px white;
+    border-radius: 50%;
+    color: #fd2525;
+}
+
+.S {
+    color: rgb(246, 246, 94);
+}
